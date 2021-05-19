@@ -1,24 +1,40 @@
 # RepoWebServer
-Ejecutar GitHubPackages
 
-- Iniciar sesion en GitHubPackages
-Generar un Personal Accion Token
-https://github.com/settings/tokens
-
-Guardar el token generando un .txt en tu server y posterior a esto ejecutar el siguiente comando donde username es tu usuario de github
-
-cat PAT.txt | docker login https://docker.pkg.github.com -u USERNAME --password-stdin
+Sistema Operativo: Distro Linux basa en Debian / Red-Hat
 
 
+- Instalacion
+
+Segun distribucion actualizar repositorios
+apt-get update
+
+Ejecutar GitClone desde repositorio github.com/omarmoncada12/repowebserver
+
+git clone https://github.com/omarmoncada12/repowebserver
+
+Quedara en Raiz del servidor el directorio /repowebserver
+
+cd repowebserver/
+
+Una vez situado en el directorio ejecutar
+
+chmod 777 install.sh
+
+Cuando se realice la asignacion de permisos ejecutar
+#Con esto se ejecutara script de instalacion de repositorio y una vez finalizado el proceso podra ingresar http://localhost:8080 y se visualizara el resultado esperado
+
+./install.sh
 
 
 
-- Se publico repositorio en DockerHUB (https://hub.docker.com/r/omarmoncada26/challengeoctano)
+
+
+* Se publico repositorio en DockerHUB (https://hub.docker.com/r/omarmoncada26/challengeoctano)
 
 Ejecutar en servidor local: 
-
+#Este Comando traera desde DockerHUB el repositorio seleccionado a su maquina
 docker pull omarmoncada26/challengeoctano
 
 posterior a esta ejecucion iniciar contenedor con el siguiente comando:
-
+#Este Comando iniciara el contenedor localmente y podra ingresar a traves de http://localhost:80 y se visualizara el resultado esperado
 docker run -p 80:80 omarmoncada26/challengeoctano:latest
