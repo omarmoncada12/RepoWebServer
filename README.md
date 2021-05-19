@@ -3,7 +3,7 @@
 Sistema Operativo: Distro Linux basa en Debian / Red-Hat
 
 
-- Instalacion
+- Instalacion via GitHub
 
 Segun distribucion actualizar repositorios
 apt-get update
