@@ -36,6 +36,7 @@ chmod +x install.sh
 docker pull omarmoncada26/challengeoctano
 
 #Posterior a esta ejecucion iniciar contenedor con el siguiente comando:
+
 #Este Comando iniciara el contenedor localmente y podra ingresar a traves de http://localhost:80 y se visualizara el resultado esperado
 
 docker run -p 80:80 omarmoncada26/challengeoctano:latest
